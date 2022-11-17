@@ -1,0 +1,137 @@
+.container {
+  text-align: center;
+  width: 96%;
+  margin: 4rem auto;
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+
+  h1 {
+    color: white;
+    .color {
+      color: rgb(22, 146, 177);
+    }
+    span {
+      transition: all 0.2s ease;
+      display: inline-block;
+      cursor: context-menu;
+      &:hover {
+        color: rgba(238, 255, 0, 0.781);
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  input {
+    padding: 1rem;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    width: 60%;
+    border: 3px solid white;
+    transition: all 0.5s ease;
+    &:focus {
+      border: 3px solid rgb(22, 146, 177);
+    }
+  }
+
+  button {
+    background: rgb(22, 146, 177);
+    border: none;
+    outline: none;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.task-container {
+  background: rgb(22, 146, 177);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem;
+  width: 97%;
+  margin: 1rem auto;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  &:hover {
+    transform: scale(1.03);
+  }
+  @media (min-width: 768px) {
+    width: 80%;
+  }
+  div {
+    display: flex;
+  }
+  h3 {
+    color: white;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1;
+    text-align: left;
+  }
+  .checked {
+    text-decoration: line-through;
+  }
+  i {
+    color: white;
+    font-size: 1.06rem;
+    margin: 0 0.43rem;
+    cursor: pointer;
+    @media (min-width: 768px) {
+      font-size: 1.16rem;
+      margin: 0 0.53rem;
+    }
+  }
+}
+.grey {
+  background: rgb(78, 75, 75);
+}
+
+.task-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal {
+  background: rgb(22, 146, 177);
+  position: fixed;
+  padding: 2rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 210;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-radius: 0.3rem;
+  width: 96%;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 110;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 0.6s ease-in-out;
+}
