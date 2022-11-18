@@ -32,7 +32,7 @@ const SingleTask = ({
   return (
     <>
       {show ? (
-        <div className="modal">
+        <div className="modal" data-aos="fade-up">
           <p>{task.task}</p>
         </div>
       ) : null}
